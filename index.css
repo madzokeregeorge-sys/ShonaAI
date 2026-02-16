@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for chat */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.zim-gradient {
+  background: linear-gradient(to right, #2E8540, #F7C900, #D62828, #000000);
+}
+.zim-strip {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, 
+    #2E8540 0%, #2E8540 25%, 
+    #F7C900 25%, #F7C900 50%, 
+    #D62828 50%, #D62828 75%, 
+    #000000 75%, #000000 100%
+  );
+}
+
+/* Markdown Styles */
+.markdown-body p {
+  margin-bottom: 0.75rem;
+}
+.markdown-body strong {
+  font-weight: 700;
+  color: #2E8540;
+}
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.markdown-body ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Mobile Safe Area Handling */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: white;
+  overscroll-behavior-y: none;
+}
